@@ -1,4 +1,4 @@
-[
+const questions = [
     {
         "text": "I have multiple interests I pursue in my free time",
         "aspect": "c",
@@ -120,3 +120,18 @@
         "reversed": true
     }
 ]
+
+function shuffle(list) {
+    for (let i = 0; i < list.length; i++) {
+        const swappedIndex = i + Math.floor(Math.random() * (list.length - i));
+        const temp = list[i];
+        list[i] = list[swappedIndex];
+        list[swappedIndex] = temp;
+    }
+}
+
+function main() {
+    shuffle(questions);
+}
+
+main()
