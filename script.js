@@ -130,14 +130,17 @@ function shuffle(list) {
     }
 }
 
+function createQuestion(parent, questionText) {
+    paragraph = document.createElement("p");
+    paragraph.textContent = questionText;
+    parent.appendChild(paragraph);
+}
+
 function main() {
     const questionsSection = document.getElementById("main");
     shuffle(questions);
     for (let i = 0; i < questions.length; i++) {
-        questionText = document.createElement("p");
-        questionText.textContent = questions[i].text;
-        questionText.classList.add("question")
-        questionsSection.appendChild(questionText);
+        createQuestion(questionsSection, questions[i].text)
     }
 }
 
