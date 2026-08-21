@@ -131,7 +131,14 @@ function shuffle(list) {
 }
 
 function main() {
+    const questionsSection = document.getElementById("main");
     shuffle(questions);
+    for (let i = 0; i < questions.length; i++) {
+        questionText = document.createElement("p");
+        questionText.textContent = questions[i].text;
+        questionText.classList.add("question")
+        questionsSection.appendChild(questionText);
+    }
 }
 
 main()
