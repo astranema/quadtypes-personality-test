@@ -95,7 +95,7 @@ const questions = [
         "reversed": false
     },
     {
-        "text": "I avoid swearing in front of children",
+        "text": "I back down from arguments when I realize I’m in the wrong",
         "aspect": "p",
         "reversed": false
     },
@@ -110,7 +110,7 @@ const questions = [
         "reversed": true
     },
     {
-        "text": "It’s hard for me to control my impulses",
+        "text": "I have issues with authority figures",
         "aspect": "p",
         "reversed": true
     },
