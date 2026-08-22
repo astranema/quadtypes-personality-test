@@ -4,11 +4,19 @@ body {
     color: #fff;
     font-family: Helvetica, Arial, sans-serif;
 }
-main {
-    max-width: 80%;
-    margin: 0 auto;
-}
 header {
     display: flex;
     justify-content: center;
+}
+.radio {
+    display: flex;
+}
+.button {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: aqua;
 }

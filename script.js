@@ -134,12 +134,27 @@ function shuffle(list) {
 function createQuestion(parent, questionText) {
     holder = document.createElement("div");
 
+    radio = createRadio();
+
     paragraph = document.createElement("p");
     paragraph.textContent = questionText;
 
     holder.appendChild(paragraph);
+    holder.appendChild(radio);
     parent.appendChild(holder);
     return holder;
+}
+
+function createRadio() {
+    radio = document.createElement("div");
+    radio.class = "radio";
+    
+    button1 = document.createElement("button");
+    button1.classList.add("button");
+
+    radio.appendChild(button1);
+
+    return radio;
 }
 
 function main() {
