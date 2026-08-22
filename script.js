@@ -194,11 +194,15 @@ function createRadio(parent) {
 function main() {
     const questionsSection = document.getElementById("questions-section");
     const radioManagers = [];
+    const submitButton = document.getElementById("submit-button");
     shuffle(questions);
     for (let i = 0; i < questions.length; i++) {
         const currentRM = createQuestion(questionsSection, questions[i].text);
         radioManagers.push(currentRM);
     }
+    submitButton.addEventListener('click', (event) => {
+        alert("hi!!");
+    });
 }
 
 main()
