@@ -20,3 +20,6 @@ header {
     outline: none;
     background-color: aqua;
 }
+.pressedButton {
+    background-color: red;
+}

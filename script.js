@@ -1,3 +1,11 @@
+class RadioManager {
+    // buttons is an array containing 7 buttons
+    constructor(buttons) {
+        this.buttons = buttons;
+        this.selected = 4;
+    }
+}
+
 const questions = [
     {
         "text": "I have multiple interests I pursue in my free time",
@@ -149,10 +157,23 @@ function createRadio() {
     radio = document.createElement("div");
     radio.class = "radio";
     
-    button1 = document.createElement("button");
-    button1.classList.add("button");
-
-    radio.appendChild(button1);
+    let buttons = [];
+    // create buttons
+    for (let i = 0; i < 7; i++) {
+        button = document.createElement("button");
+        button.classList.add("button");
+        buttons.push(button);
+        radio.appendChild(button);
+    }
+    radioManager = new RadioManager(buttons);
+    // add eventListeners to buttons
+    for (let i = 0; i < 7; i++) {
+        buttons[i].addEventListener('click', (event) => {
+            buttons[i].classList.add("pressedButton");
+            buttons[radioManager.selected].classList.remove("pressedButton");
+            radioManager.selected = i;
+        });
+    }
 
     return radio;
 }
