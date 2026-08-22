@@ -2,7 +2,7 @@ class RadioManager {
     // buttons is an array containing 7 buttons
     constructor(buttons) {
         this.buttons = buttons;
-        this.selected = 4;
+        this.selected = -1;
     }
 }
 
@@ -171,11 +171,13 @@ function createRadio() {
         buttons.push(button);
         radio.appendChild(button);
     }
-    radioManager = new RadioManager(buttons);
+    const radioManager = new RadioManager(buttons);
     // add eventListeners to buttons
     for (let i = 0; i < 7; i++) {
         buttons[i].addEventListener('click', (event) => {
-            buttons[radioManager.selected].classList.remove("pressedButton");
+            if (radioManager.selected != -1) {
+                buttons[radioManager.selected].classList.remove("pressedButton");
+            }
             buttons[i].classList.add("pressedButton");
             radioManager.selected = i;
         });
