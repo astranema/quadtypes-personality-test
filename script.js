@@ -143,18 +143,16 @@ function createQuestion(parent, questionText) {
     holder = document.createElement("div");
     holder.classList.add("question-holder");
 
-    radio = createRadio();
-
     paragraph = document.createElement("p");
     paragraph.textContent = questionText;
 
     holder.appendChild(paragraph);
-    holder.appendChild(radio);
+    const radioManager = createRadio(holder);
     parent.appendChild(holder);
-    return holder;
+    return radioManager;
 }
 
-function createRadio() {
+function createRadio(parent) {
     radio = document.createElement("div");
     radio.classList.add("radio");
 
@@ -188,17 +186,18 @@ function createRadio() {
     agree.textContent = "Agree";
     radio.appendChild(agree);
 
+    parent.appendChild(radio);
 
-    return radio;
+    return radioManager;
 }
 
 function main() {
     const questionsSection = document.getElementById("questions-section");
-    const holders = [];
+    const radioManagers = [];
     shuffle(questions);
     for (let i = 0; i < questions.length; i++) {
-        const currentHolder = createQuestion(questionsSection, questions[i].text);
-        holders.push(currentHolder);
+        const currentRM = createQuestion(questionsSection, questions[i].text);
+        radioManagers.push(currentRM);
     }
 }
 
