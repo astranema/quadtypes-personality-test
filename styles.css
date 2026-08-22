@@ -22,7 +22,7 @@ header {
     background-color: aqua;
 }
 .pressedButton {
-    background-color: red !important;
+    background-color: red;
 }
 .question-holder {
     padding-bottom: 40px;
