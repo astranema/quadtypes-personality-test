@@ -141,6 +141,7 @@ function shuffle(list) {
 // returns div holding question text and radio
 function createQuestion(parent, questionText) {
     holder = document.createElement("div");
+    holder.classList.add("question-holder");
 
     radio = createRadio();
 
@@ -155,7 +156,12 @@ function createQuestion(parent, questionText) {
 
 function createRadio() {
     radio = document.createElement("div");
-    radio.class = "radio";
+    radio.classList.add("radio");
+
+    // disagree
+    const disagree = document.createElement("div");
+    disagree.textContent = "Disagree";
+    radio.appendChild(disagree);
     
     let buttons = [];
     // create buttons
@@ -169,11 +175,17 @@ function createRadio() {
     // add eventListeners to buttons
     for (let i = 0; i < 7; i++) {
         buttons[i].addEventListener('click', (event) => {
-            buttons[i].classList.add("pressedButton");
             buttons[radioManager.selected].classList.remove("pressedButton");
+            buttons[i].classList.add("pressedButton");
             radioManager.selected = i;
         });
     }
+
+    // agree
+    const agree = document.createElement("div");
+    agree.textContent = "Agree";
+    radio.appendChild(agree);
+
 
     return radio;
 }
