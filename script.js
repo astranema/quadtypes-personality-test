@@ -174,9 +174,9 @@ function createRadio(parent) {
     for (let i = 0; i < 7; i++) {
         buttons[i].addEventListener('click', (event) => {
             if (radioManager.selected != -1) {
-                buttons[radioManager.selected].classList.remove("pressedButton");
+                buttons[radioManager.selected].classList.remove("pressed-button");
             }
-            buttons[i].classList.add("pressedButton");
+            buttons[i].classList.add("pressed-button");
             radioManager.selected = i;
         });
     }

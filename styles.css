@@ -21,7 +21,7 @@ header {
     outline: none;
     background-color: aqua;
 }
-.pressedButton {
+.pressed-button {
     background-color: red;
 }
 .question-holder {
