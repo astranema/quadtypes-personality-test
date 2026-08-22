@@ -130,18 +130,25 @@ function shuffle(list) {
     }
 }
 
+// returns div holding question text and radio
 function createQuestion(parent, questionText) {
+    holder = document.createElement("div");
+
     paragraph = document.createElement("p");
     paragraph.textContent = questionText;
 
-    parent.appendChild(paragraph);
+    holder.appendChild(paragraph);
+    parent.appendChild(holder);
+    return holder;
 }
 
 function main() {
     const questionsSection = document.getElementById("questions-section");
+    const holders = [];
     shuffle(questions);
     for (let i = 0; i < questions.length; i++) {
-        createQuestion(questionsSection, questions[i].text)
+        const currentHolder = createQuestion(questionsSection, questions[i].text);
+        holders.push(currentHolder);
     }
 }
 
