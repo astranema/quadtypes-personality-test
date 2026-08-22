@@ -133,11 +133,12 @@ function shuffle(list) {
 function createQuestion(parent, questionText) {
     paragraph = document.createElement("p");
     paragraph.textContent = questionText;
+
     parent.appendChild(paragraph);
 }
 
 function main() {
-    const questionsSection = document.getElementById("main");
+    const questionsSection = document.getElementById("questions-section");
     shuffle(questions);
     for (let i = 0; i < questions.length; i++) {
         createQuestion(questionsSection, questions[i].text)
