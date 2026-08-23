@@ -203,10 +203,10 @@ function shuffle(list) {
 
 // returns div holding question text and radio
 function createQuestion(parent, questionText) {
-    holder = document.createElement("div");
+    const holder = document.createElement("div");
     holder.classList.add("question-holder");
 
-    paragraph = document.createElement("p");
+    const paragraph = document.createElement("p");
     paragraph.textContent = questionText;
 
     holder.appendChild(paragraph);
@@ -216,7 +216,7 @@ function createQuestion(parent, questionText) {
 }
 
 function createRadio(parent) {
-    radio = document.createElement("div");
+    const radio = document.createElement("div");
     radio.classList.add("radio");
 
     // disagree
@@ -224,10 +224,10 @@ function createRadio(parent) {
     disagree.textContent = "Disagree";
     radio.appendChild(disagree);
     
-    let buttons = [];
+    const buttons = [];
     // create buttons
     for (let i = 0; i < 7; i++) {
-        button = document.createElement("button");
+        const button = document.createElement("button");
         button.classList.add("button");
         button.classList.add(`outline-color-${i}`)
         buttons.push(button);
