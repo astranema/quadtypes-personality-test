@@ -237,11 +237,24 @@ function createRadio(parent) {
     // add eventListeners to buttons
     for (let i = 0; i < 7; i++) {
         buttons[i].addEventListener('click', (event) => {
-            if (radioManager.selected != -1) {
+            if (radioManager.selected !== -1) {
                 buttons[radioManager.selected].classList.remove(`background-color-${radioManager.selected}`);
             }
             buttons[i].classList.add(`background-color-${i}`);
             radioManager.selected = i;
+        });
+        // hover mouse over
+        buttons[i].addEventListener('mouseenter', () => {
+            if (i === radioManager.selected) {
+                return;
+            }
+            buttons[i].classList.add(`background-color-${i}`);
+        });
+        buttons[i].addEventListener('mouseleave', () => {
+            if (i === radioManager.selected) {
+                return;
+            }
+            buttons[i].classList.remove(`background-color-${i}`);
         });
     }
 
