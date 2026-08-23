@@ -13,7 +13,7 @@ body {
     margin: 0px;
     background-color: #222;
     color: #fff;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Outfit', sans-serif
 }
 header {
     display: flex;
@@ -22,6 +22,9 @@ header {
 main {
     margin: 0 auto;
     max-width: 600px;
+}
+p {
+    font-size: 1.2em;
 }
 .radio {
     display: flex;
