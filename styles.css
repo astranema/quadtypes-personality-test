@@ -42,9 +42,6 @@ p {
     outline-style: solid;
     background-color: transparent;
 }
-.pressed-button {
-    background-color: red;
-}
 .question-holder {
     padding-bottom: 40px;
 }
