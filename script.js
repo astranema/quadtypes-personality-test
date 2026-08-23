@@ -267,7 +267,7 @@ function main() {
     submitButton.addEventListener('click', (event) => {
         // Scores object
         const scores = calculateScore(questions, radioManagers);
-        alert(`${scores.curiosity}, ${scores.sociability}, ${scores.efficacy}, ${scores.prosociality}`);
+        window.location.href = `results.html?c=${scores.curiosity}&s=${scores.sociability}&e=${scores.efficacy}&p=${scores.prosociality}`
     });
 }
 
