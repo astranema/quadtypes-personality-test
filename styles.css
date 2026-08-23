@@ -1,11 +1,11 @@
 :root {
-    --color-0: #f9cb8f;
-    --color-1: #e6926e;
-    --color-2: #d96a73;
+    --color-6: #f9cb8f;
+    --color-5: #e6926e;
+    --color-4: #d96a73;
     --color-3: #c8388a;
-    --color-4: #b12f9f;
-    --color-5: #9a2eb2;
-    --color-6: #7f39bf;
+    --color-2: #b12f9f;
+    --color-1: #9a2eb2;
+    --color-0: #7f39bf;
 }
 body {
     margin: 0px;
