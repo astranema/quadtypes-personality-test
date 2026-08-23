@@ -10,6 +10,8 @@ const curiosityDisplay = document.getElementById("curiosity-display");
 const sociabilityDisplay = document.getElementById("sociability-display");
 const efficacyDisplay = document.getElementById("efficacy-display");
 const prosocialityDisplay = document.getElementById("prosociality-display");
+const typeDisplay = document.getElementById("type-display");
+const subtypeDisplay = document.getElementById("subtype-display");
 
 function getStack(c, s, e, p) {
     let stack = "";
@@ -29,13 +31,49 @@ function getStack(c, s, e, p) {
     return stack;
 }
 
+function getNickname(type) {
+    const first = type[0];
+    const last = type[2];
+    switch (true) {
+        case first === "C" && last === "S":
+            return "The Sage";
+        case first === "C" && last === "P":
+            return "The Explorer";
+        case first === "C" && last === "E":
+            return "The Artist";
+        case first === "S" && last === "P":
+            return "The Jester";
+        case first === "S" && last === "E":
+            return "The Lover";
+        case first === "S" && last === "C":
+            return "The Hero";
+        case first === "P" && last === "E":
+            return "The Innocent";
+        case first === "P" && last === "C":
+            return "The Caregiver";
+        case first === "P" && last === "S":
+            return "The Senex";
+        case first === "E" && last === "C":
+            return "The Ruler";
+        case first === "E" && last === "S":
+            return "The Everyman";
+        case first === "E" && last === "P":
+            return "The Rebel";
+    }
+}
+
 function main() {
+    const subtype = getStack(curiosity, sociability, efficacy, prosociality);
+    const type = subtype[0] + "/" + subtype[3];
+    const nickname = getNickname(type);
+
     curiosityDisplay.textContent = `Curiosity: ${curiosity}`;
     sociabilityDisplay.textContent = `Sociability: ${sociability}`;
     efficacyDisplay.textContent = `Efficacy: ${efficacy}`;
     prosocialityDisplay.textContent = `Prosociality: ${prosociality}`;
-    const subtype = getStack(curiosity, sociability, efficacy, prosociality);
-    const type = subtype[0] + "/" + subtype[3];
+    typeDisplay.textContent = `Result: ${type} (${nickname})`;
+    subtypeDisplay.textContent = `Subtype: ${subtype}`;
+    
 }
 
 main();
