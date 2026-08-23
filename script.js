@@ -229,7 +229,7 @@ function createRadio(parent) {
     for (let i = 0; i < 7; i++) {
         const button = document.createElement("button");
         button.classList.add("button");
-        button.classList.add(`outline-color-${i}`)
+        button.classList.add(`border-color-${i}`)
         buttons.push(button);
         radio.appendChild(button);
     }

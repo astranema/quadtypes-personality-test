@@ -35,36 +35,34 @@ p {
     width: 40px;
     aspect-ratio: 1 / 1;
     border-radius: 100%;
-    border: none;
     box-shadow: none;
-    outline-width: 6px;
-    outline-offset: -5px;
-    outline-style: solid;
+    border-width: 6px;
+    border-style: solid;
     background-color: transparent;
 }
 .question-holder {
     padding-bottom: 40px;
 }
-.outline-color-0 {
-    outline-color: var(--color-0);
+.border-color-0 {
+    border-color: var(--color-0);
 }
-.outline-color-1 {
-    outline-color: var(--color-1);
+.border-color-1 {
+    border-color: var(--color-1);
 }
-.outline-color-2 {
-    outline-color: var(--color-2);
+.border-color-2 {
+    border-color: var(--color-2);
 }
-.outline-color-3 {
-    outline-color: var(--color-3);
+.border-color-3 {
+    border-color: var(--color-3);
 }
-.outline-color-4 {
-    outline-color: var(--color-4);
+.border-color-4 {
+    border-color: var(--color-4);
 }
-.outline-color-5 {
-    outline-color: var(--color-5);
+.border-color-5 {
+    border-color: var(--color-5);
 }
-.outline-color-6 {
-    outline-color: var(--color-6);
+.border-color-6 {
+    border-color: var(--color-6);
 }
 .background-color-0 {
     background-color: var(--color-0);
