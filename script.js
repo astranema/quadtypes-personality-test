@@ -236,6 +236,14 @@ function createRadio(parent) {
         radio.appendChild(button);
     }
     const radioManager = new RadioManager(buttons);
+    // add aria labels to buttons
+    buttons[0].ariaLabel = "Strongly disagree";
+    buttons[1].ariaLabel = "Disagree";
+    buttons[2].ariaLabel = "Slightly disagree";
+    buttons[3].ariaLabel = "Neither agree nor disagree";
+    buttons[4].ariaLabel = "Slightly agree";
+    buttons[5].ariaLabel = "Agree";
+    buttons[6].ariaLabel = "Strongly agree";
     // add eventListeners to buttons
     for (let i = 0; i < 7; i++) {
         buttons[i].addEventListener('click', (event) => {
