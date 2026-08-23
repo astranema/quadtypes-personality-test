@@ -1,3 +1,12 @@
+:root {
+    --color-0: #f9cb8f;
+    --color-1: #e6926e;
+    --color-2: #d96a73;
+    --color-3: #c8388a;
+    --color-4: #b12f9f;
+    --color-5: #9a2eb2;
+    --color-6: #7f39bf;
+}
 body {
     margin: 0px;
     background-color: #222;
@@ -8,22 +17,71 @@ header {
     display: flex;
     justify-content: center;
 }
+main {
+    margin: 0 auto;
+    max-width: 600px;
+}
 .radio {
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 .button {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
     border: none;
     box-shadow: none;
-    outline: none;
-    background-color: aqua;
+    outline-width: 6px;
+    outline-offset: -5px;
+    outline-style: solid;
+    background-color: transparent;
 }
 .pressed-button {
     background-color: red;
 }
 .question-holder {
     padding-bottom: 40px;
+}
+.outline-color-0 {
+    outline-color: var(--color-0);
+}
+.outline-color-1 {
+    outline-color: var(--color-1);
+}
+.outline-color-2 {
+    outline-color: var(--color-2);
+}
+.outline-color-3 {
+    outline-color: var(--color-3);
+}
+.outline-color-4 {
+    outline-color: var(--color-4);
+}
+.outline-color-5 {
+    outline-color: var(--color-5);
+}
+.outline-color-6 {
+    outline-color: var(--color-6);
+}
+.background-color-0 {
+    background-color: var(--color-0);
+}
+.background-color-1 {
+    background-color: var(--color-1);
+}
+.background-color-2 {
+    background-color: var(--color-2);
+}
+.background-color-3 {
+    background-color: var(--color-3);
+}
+.background-color-4 {
+    background-color: var(--color-4);
+}
+.background-color-5 {
+    background-color: var(--color-5);
+}
+.background-color-6 {
+    background-color: var(--color-6);
 }

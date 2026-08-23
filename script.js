@@ -229,6 +229,7 @@ function createRadio(parent) {
     for (let i = 0; i < 7; i++) {
         button = document.createElement("button");
         button.classList.add("button");
+        button.classList.add(`outline-color-${i}`)
         buttons.push(button);
         radio.appendChild(button);
     }
@@ -237,9 +238,9 @@ function createRadio(parent) {
     for (let i = 0; i < 7; i++) {
         buttons[i].addEventListener('click', (event) => {
             if (radioManager.selected != -1) {
-                buttons[radioManager.selected].classList.remove("pressed-button");
+                buttons[radioManager.selected].classList.remove(`background-color-${radioManager.selected}`);
             }
-            buttons[i].classList.add("pressed-button");
+            buttons[i].classList.add(`background-color-${i}`);
             radioManager.selected = i;
         });
     }
