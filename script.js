@@ -6,6 +6,15 @@ class RadioManager {
     }
 }
 
+class Scores {
+    constructor(curiosity, sociability, efficacy, prosociality) {
+        this.curiosity = curiosity;
+        this.sociability = sociability;
+        this.efficacy = efficacy;
+        this.prosociality = prosociality;
+    }
+}
+
 const questions = [
     {
         "text": "I have multiple interests I pursue in my free time",
@@ -129,6 +138,60 @@ const questions = [
     }
 ]
 
+// returns a created Scores object
+// questions is an array of questions objects (see: global const questions)
+// radioManagers is an array of radioManager objects
+// the two arrays MUST correlate (radioManagers[12] is the RM for the question questions[12])
+function calculateScore(questions, radioManagers) {
+    // all are integers
+    let curiosity = 0;
+    let sociability = 0;
+    let efficacy = 0;
+    let prosociality = 0;
+    for (let i = 0; i < questions.length; i++) {
+        let value = radioManagers[i].selected;
+        if (value == -1) {
+            value = 3;
+        }
+        switch (questions[i].aspect) {
+            case "c":
+                if (questions[i].reversed) {
+                    curiosity += (6 - value);
+                }
+                else {
+                    curiosity += value;
+                }
+                break;
+            case "s":
+                if (questions[i].reversed) {
+                    sociability += (6 - value);
+                }
+                else {
+                    sociability += value;
+                }
+                break;
+            case "e":
+                if (questions[i].reversed) {
+                    efficacy += (6 - value);
+                }
+                else {
+                    efficacy += value;
+                }
+                break;
+            case "p":
+                if (questions[i].reversed) {
+                    prosociality += (6 - value);
+                }
+                else {
+                    prosociality += value;
+                }
+                break;
+        }
+    }
+    const scores = new Scores(curiosity, sociability, efficacy, prosociality);
+    return scores;
+}
+
 function shuffle(list) {
     for (let i = 0; i < list.length; i++) {
         const swappedIndex = i + Math.floor(Math.random() * (list.length - i));
@@ -201,8 +264,10 @@ function main() {
         radioManagers.push(currentRM);
     }
     submitButton.addEventListener('click', (event) => {
-        alert("hi!!");
+        // Scores object
+        const scores = calculateScore(questions, radioManagers);
+        alert(`${scores.curiosity}, ${scores.sociability}, ${scores.efficacy}, ${scores.prosociality}`);
     });
 }
 
-main()
+main();
