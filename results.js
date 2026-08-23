@@ -1,3 +1,5 @@
+"use strict";
+
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 
@@ -18,7 +20,7 @@ function getStack(c, s, e, p) {
     let aspectsArr = ["C", "S", "E", "P"];
     let valuesArr = [c, s, e, p];
     for (let i = 0; i < 4; i++) {
-        maxIndex = 0;
+        let maxIndex = 0;
         for (let j = 0; j < (4 - i); j++) {
             if (valuesArr[j] > valuesArr[maxIndex]) {
                 maxIndex = j;

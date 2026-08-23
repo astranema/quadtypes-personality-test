@@ -1,3 +1,5 @@
+"use strict";
+
 class RadioManager {
     // buttons is an array containing 7 buttons
     constructor(buttons) {
