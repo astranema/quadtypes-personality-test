@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 :root {
     --color-6: #f9cb8f;
     --color-5: #e6926e;
@@ -11,7 +13,7 @@ body {
     margin: 0px;
     background-color: #222;
     color: #fff;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Outfit', sans-serif;
 }
 header {
     display: flex;
