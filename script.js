@@ -150,7 +150,7 @@ function calculateScore(questions, radioManagers) {
     let prosociality = 0;
     for (let i = 0; i < questions.length; i++) {
         let value = radioManagers[i].selected;
-        if (value == -1) {
+        if (value === -1) {
             value = 3;
         }
         switch (questions[i].aspect) {
