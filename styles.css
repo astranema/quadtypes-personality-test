@@ -7,12 +7,14 @@
     --color-3: #D1517F;
     --color-2: #C63C90;
     --color-1: #AB43AA;
-    --color-0: #8E4ECA;
+    --color-0: #894AC3;
+    --color-bg: #1e1e1e;
+    --color-text: #ffeefa;
 }
 body {
     margin: 2px;
-    background-color: #222;
-    color: #fff;
+    background-color: var(--color-bg);
+    color: var(--color-text);
     font-family: 'Outfit', sans-serif
 }
 header {
