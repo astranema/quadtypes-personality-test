@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 :root {
-    --color-6: #f9cb8f;
-    --color-5: #e6926e;
-    --color-4: #d96a73;
-    --color-3: #c8388a;
-    --color-2: #b12f9f;
-    --color-1: #9a2eb2;
-    --color-0: #7f39bf;
+    --color-6: #F9CB8F;
+    --color-5: #ECA37C;
+    --color-4: #E07E71;
+    --color-3: #D1517F;
+    --color-2: #C63C90;
+    --color-1: #AB43AA;
+    --color-0: #8E4ECA;
 }
 body {
     margin: 2px;
