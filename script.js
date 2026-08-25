@@ -219,6 +219,7 @@ function createQuestion(parent, questionText) {
 
 function createRadio(parent) {
     const radio = document.createElement("div");
+    radio.role = "radiogroup";
     radio.classList.add("radio");
 
     // disagree
@@ -231,7 +232,9 @@ function createRadio(parent) {
     for (let i = 0; i < 7; i++) {
         const button = document.createElement("button");
         button.classList.add("button");
-        button.classList.add(`border-color-${i}`)
+        button.classList.add(`border-color-${i}`);
+        button.role = "radio";
+        button.ariaChecked = "false";
         buttons.push(button);
         radio.appendChild(button);
     }
@@ -249,8 +252,10 @@ function createRadio(parent) {
         buttons[i].addEventListener('click', (event) => {
             if (radioManager.selected !== -1) {
                 buttons[radioManager.selected].classList.remove(`background-color-${radioManager.selected}`);
+                buttons[radioManager.selected].ariaChecked = "false";
             }
             buttons[i].classList.add(`background-color-${i}`);
+            buttons[i].ariaChecked = "true";
             radioManager.selected = i;
         });
         // hover mouse over
