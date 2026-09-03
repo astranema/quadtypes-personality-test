@@ -1,5 +1,5 @@
 # Quadtypes Personality Test
-Take the test here! https://astranema.github.io/quadtypes-personality-test/
+Take the test here! https://luna-oneil.github.io/quadtypes-personality-test/
 
 A personality test written in vanilla JS/CSS/HTML. Calculates a person's score on four different scales (Curiosity, Sociability, Efficacy, and Prosociality).
 
